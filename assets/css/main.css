@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --sailing-primary: #0E4D92;
+  --sailing-secondary: #00A3E0;
+  --sailing-light: #F5F7FA;
+  --sailing-handle-size: 20px;
+}
+
+.sailing-canvas {
+  cursor: crosshair;
+  background: var(--sailing-light);
+}
+
+.sailing-handle {
+  width: var(--sailing-handle-size);
+  height: var(--sailing-handle-size);
+  border-radius: 50%;
+  border: 2px solid var(--sailing-primary);
+  background: white;
+  cursor: grab;
+  transition: all 0.1s ease;
+}
+
+.sailing-handle:hover,
+.sailing-handle.dragging {
+  transform: scale(1.2);
+  cursor: grabbing;
+  border-color: var(--sailing-secondary);
+  box-shadow: 0 0 10px rgba(0, 163, 224, 0.4);
+}
+
+.sailing-panel {
+  background: white;
+  border: 2px solid var(--sailing-primary);
+  border-radius: 8px;
+  font-family: monospace;
+}
