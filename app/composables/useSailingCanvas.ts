@@ -8,7 +8,7 @@ export function useSailingCanvas(canvasRef: Ref<HTMLCanvasElement | null>) {
   // État des vecteurs
   const boatHeading = ref(0) // Angle en radians
   const boatSpeed = ref(5) // Vitesse en nœuds (5-50)
-  const windHeading = ref(Math.PI / 4) // Angle du vent réel (45°)
+  const windHeading = ref(- Math.PI / 4) // Angle du vent réel (45°)
   const windSpeed = ref(10) // Vitesse du vent en nœuds (5-50)
   
   // États d'interaction
